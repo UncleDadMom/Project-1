@@ -1,0 +1,60 @@
+{
+  "dogs": [
+    {
+      "id": 1,
+      "breed": "Golden Retriever",
+      "image": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/22133125/Golden-Retriever-standing-outdoors.jpg",
+      "votes": 0
+    },
+    {
+      "id": 2,
+      "breed": "Australian Sheperd",
+      "image": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/03173132/Australian-Shepherd.1.jpg",
+      "votes": 0
+    },
+    {
+      "id": 3,
+      "breed": "Samoyed",
+      "image": "https://www.purinaproclub.com/sites/g/files/auxxlc346/files/styles/large/public/Kegs_Thumbnail.jpg?itok=V16-5I6m",
+      "votes": 0
+    },
+    {
+      "id": 4,
+      "breed": "Brittany Spaniel",
+      "image": "https://floridabrittanyrescue.org/dogs/files/photo_gallery_images/FBR0004Kona_1.jpg",
+      "votes": 0
+    },
+    {
+      "id": 5,
+      "breed": "French Bulldog",
+      "image": "https://cdn11.bigcommerce.com/s-fduu8evurl/product_images/uploaded_images/blue.jpg",
+      "votes": 10
+    },
+    {
+      "id": 6,
+      "breed": "Tibetan Mastiff",
+      "image": "https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/07/Red-Tibetan-Mastiff.jpeg?resize=750%2C554&ssl=1",
+      "votes": 8
+    }
+  ],
+  "cats": [
+    {
+      "id": 1,
+      "breed": "Sphynx",
+      "image": "https://s30379.pcdn.co/wp-content/uploads/2019/09/p1dfjorjqds6c9o21dre1ngs1p3j6.jpg",
+      "votes": 0
+    },
+    {
+      "id": 2,
+      "breed": "Tabby",
+      "image": "http://cdn.shopify.com/s/files/1/0344/6469/files/2-tabby-cats-graywhite-orange_grande.jpg?v=1525103182",
+      "votes": 1
+    },
+    {
+      "id": 3,
+      "breed": "Ragdoll",
+      "image": "https://s36537.pcdn.co/wp-content/uploads/2018/01/Ragdoll-cat-on-blue-backdrop-.jpg.optimal.jpg",
+      "votes": 0
+    }
+  ]
+}
