@@ -13,11 +13,13 @@ function renderCat(cats) {
     const catImg = document.createElement("img");
     catImg.src = randoCat.image;
     catImg.id = randoCat.id;
-    document.querySelector("div#cat").append(catImg);
-    document.querySelector("input#cat-input").addEventListener(`submit`, catSubmit(randoCat))
+    catImg.alt = randoCat.breed;
+    document.querySelector("#cat").prepend(catImg);
+    document.querySelector("#cat-button").innerHTML = `${randoCat.breed}`
+    document.querySelector("#cat-form").addEventListener(`submit`, () => catSubmit(randoCat))
 }
-function catSubmit(randoCat){
-    let catVote = randoCat.votes
+function catSubmit(randoCat){ //handler function for cat vote
+    let catVote = randoCat.votes;
     const votePojo = {
         votes: ++catVote
     }
@@ -29,13 +31,28 @@ function catSubmit(randoCat){
         body: JSON.stringify(votePojo)
     })
     .then(res => res.json())
-    debugger;
 }
 function renderDog(dogs) {
     let randoDog = dogs[Math.floor(Math.random() * dogs.length)];
     const dogImg = document.createElement("img");
     dogImg.src = randoDog.image;
     dogImg.id = randoDog.id;
-    document.querySelector("div#dog").prepend(dogImg);
-    // document.querySelector("input#dog-input").addEventListener(`submit`
+    dogImg.alt = randoDog.breed;
+    document.querySelector("#dog").prepend(dogImg);
+    document.querySelector("#dog-button").innerHTML = `${randoDog.breed}`
+    document.querySelector("#dog-form").addEventListener(`submit`, () => dogSubmit(randoDog))
+}
+function dogSubmit(randoDog){ //handler function for dog vote
+    let dogVote = randoDog.votes;
+    const votePojo = {
+        votes: ++dogVote
+    };
+    fetch(`${dogURL}/${randoDog.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(votePojo)
+    })
+    .then(res => res.json())
 }
