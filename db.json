@@ -4,49 +4,57 @@
       "id": 1,
       "breed": "Golden Retriever",
       "image": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/22133125/Golden-Retriever-standing-outdoors.jpg",
-      "votes": 0
+      "wins": 1,
+      "losses": 1
     },
     {
       "id": 2,
       "breed": "Australian Sheperd",
       "image": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/03173132/Australian-Shepherd.1.jpg",
-      "votes": 0
+      "wins": 1,
+      "losses": 0
     },
     {
       "id": 3,
       "breed": "Samoyed",
       "image": "https://www.purinaproclub.com/sites/g/files/auxxlc346/files/styles/large/public/Kegs_Thumbnail.jpg?itok=V16-5I6m",
-      "votes": 0
+      "wins": 0,
+      "losses": 0
     },
     {
       "id": 4,
       "breed": "Brittany Spaniel",
       "image": "https://floridabrittanyrescue.org/dogs/files/photo_gallery_images/FBR0004Kona_1.jpg",
-      "votes": 0
+      "wins": 3,
+      "losses": 0
     },
     {
       "id": 5,
       "breed": "French Bulldog",
       "image": "https://cdn11.bigcommerce.com/s-fduu8evurl/product_images/uploaded_images/blue.jpg",
-      "votes": 0
+      "wins": 1,
+      "losses": 5
     },
     {
-        "id": 6,
-        "breed": "Tibetan Mastiff",
-        "image": "https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/07/Red-Tibetan-Mastiff.jpeg?resize=750%2C554&ssl=1",
-        "votes": 0
+      "id": 6,
+      "breed": "Tibetan Mastiff",
+      "image": "https://i1.wp.com/puppytoob.com/wp-content/uploads/2017/07/Red-Tibetan-Mastiff.jpeg?resize=750%2C554&ssl=1",
+      "wins": 3,
+      "losses": 2
     },
     {
       "id": 7,
       "breed": "Nova Scotia Duck Tolling Retriever",
       "image": "https://images.unsplash.com/photo-1600352774373-7b992e5189de?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bm92YSUyMHNjb3RpYSUyMGR1Y2slMjB0b2xsaW5nJTIwcmV0cmlldmVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
-      "votes": 0
+      "wins": 2,
+      "losses": 0
     },
     {
       "id": 8,
       "breed": "Greyhound",
       "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Italian_Greyhound_standing_gray_%28cropped%29.jpg",
-      "votes": 0
+      "wins": 6,
+      "losses": 6
     }
   ],
   "cats": [
@@ -54,49 +62,57 @@
       "id": 1,
       "breed": "Sphynx",
       "image": "https://s30379.pcdn.co/wp-content/uploads/2019/09/p1dfjorjqds6c9o21dre1ngs1p3j6.jpg",
-      "votes": 0
+      "wins": 2,
+      "losses": 2
     },
     {
       "id": 2,
       "breed": "Tabby",
       "image": "http://cdn.shopify.com/s/files/1/0344/6469/files/2-tabby-cats-graywhite-orange_grande.jpg?v=1525103182",
-      "votes": 0
+      "wins": 1,
+      "losses": 1
     },
     {
       "id": 3,
       "breed": "Ragdoll",
       "image": "https://s36537.pcdn.co/wp-content/uploads/2018/01/Ragdoll-cat-on-blue-backdrop-.jpg.optimal.jpg",
-      "votes": 0
+      "wins": 1,
+      "losses": 1
     },
     {
       "id": 4,
       "image": "https://azure.wgp-cdn.co.uk/app-yourcat/posts/russian_blue1.jpg?&width=480&height=480&bgcolor=ffffff&mode=crop",
       "breed": "Russian Blue",
-      "votes": 0
+      "wins": 0,
+      "losses": 3
     },
     {
       "id": 5,
       "image": "https://s36537.pcdn.co/wp-content/uploads/2017/09/Munchkin-cat-black-and-white.jpg.optimal.jpg",
       "breed": "Munchkin",
-      "votes": 0
+      "wins": 0,
+      "losses": 2
     },
     {
       "id": 6,
       "image": "https://www.thesprucepets.com/thmb/cZBmjgRr9Y1dxmRVpbcw5tATErk=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-925319984-36b97d913d934d229d8b0d528a7da64e.jpg",
       "breed": "American Shorthair",
-      "votes": 0
+      "wins": 0,
+      "losses": 2
     },
     {
       "id": 7,
       "image": "https://vetstreet.brightspotcdn.com/dims4/default/7cc218c/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fa5%2F69%2Fe639b7ab40c2a290e3296de726d8%2FPersian-AP-PIFN6J-645sm3614.jpg",
       "breed": "Persian",
-      "votes": 0
+      "wins": 0,
+      "losses": 0
     },
     {
       "id": 8,
       "image": "https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2lhbWVzZSUyMGNhdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
       "breed": "Siamese",
-      "votes": 0
+      "wins": 0,
+      "losses": 0
     }
   ]
 }
