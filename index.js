@@ -9,7 +9,7 @@ fetch(catURL)
 .then((cats) => {
     catArray = cats
     renderCat(catArray)
-})
+});
 
 let dogArray
 fetch(dogURL)
@@ -17,7 +17,7 @@ fetch(dogURL)
 .then((dogs) => {
     dogArray = dogs 
     renderDog(dogArray)
-})
+});
 
 const catImg = document.createElement("img");
 const catButton = document.querySelector("#cat-button")
@@ -25,18 +25,14 @@ function renderCat(cats) {
     let randoCat = cats[Math.floor(Math.random() * cats.length)]; //randomly selects cat
     catDiv.dataset.catId = randoCat.id
     catDiv.dataset.lossCount = randoCat.losses;
-    catImg.src = randoCat.image;
-    catImg.id = randoCat.id;
-    catImg.alt = randoCat.breed;
-    
+    [catImg.src, catImg.id, catImg.alt] = [randoCat.image, randoCat.id, randoCat.breed]
     catDiv.prepend(catImg);
     catButton.innerHTML = `${randoCat.breed}`
     document.querySelector("#cat-form").addEventListener(`submit`, (e) => catSubmit(e, randoCat))
-}
+};
 
 function catSubmit(e, randoCat){ //handler function for cat vote
     e.preventDefault();
-    const newCat = catArray[catArray.length - randoCat.id];
     let catVote = randoCat.wins;
     const catWin = {
         wins: ++catVote
@@ -62,27 +58,31 @@ function catSubmit(e, randoCat){ //handler function for cat vote
         body: JSON.stringify(dogLoss)
     })
     .then(res => res.json()) //adds +1 to dog's loss count
+
     randomizeCat()
-}
+};
+let newCat
 function randomizeCat(){
-    const newCat = catArray[catArray.length - catDiv.dataset.catId];
-    [catImg.src, catImg.id] = [newCat.image, newCat.id];
+    newCat = catArray[catArray.length - (Math.floor(Math.random() * catImg.id))]
+    catImg.src = newCat.image
+    catImg.id = newCat.id
     catButton.innerHTML = `${newCat.breed}`;
+    catDiv.dataset.catId = newCat.id;
+    catDiv.dataset.lossCount = newCat.losses;
 };
 
 const dogImg = document.createElement("img");
 const dogButton = document.querySelector("#dog-button")
 function renderDog(dogs) {
     let randoDog = dogs[Math.floor(Math.random() * dogs.length)];
-    dogImg.src = randoDog.image;
-    dogImg.id = randoDog.id;
-    dogImg.alt = randoDog.breed;
+    [dogImg.src, dogImg.id, dogImg.alt] = [randoDog.image, randoDog.id, randoDog.breed]
     dogDiv.dataset.dogId = randoDog.id; 
     dogDiv.dataset.lossCount = randoDog.losses;
     dogDiv.prepend(dogImg);
     dogButton.innerHTML = `${randoDog.breed}`
     document.querySelector("#dog-form").addEventListener(`submit`, (e) => dogVote(e,randoDog))
-}
+};
+
 function dogVote(e, randoDog){ //handler function for dog vote
     e.preventDefault();
     const dogWin = {
@@ -109,21 +109,11 @@ function dogVote(e, randoDog){ //handler function for dog vote
     })
     .then(res => res.json());
     randomizeDog()
-}    
-//     const catImg = document.createElement("img");
-//     let randoCat = cats[Math.floor(Math.random() * cats.length)]; //randomly selects cat
-//     catDiv.dataset.catId = randoCat.id
-//     catDiv.dataset.lossCount = randoCat.losses;
-//     catImg.src = randoCat.image;
-//     catImg.id = randoCat.id;
-//     catImg.alt = randoCat.breed;
-    
-//     catDiv.prepend(catImg);
-//     document.querySelector("#cat-button").innerHTML = `${randoCat.breed}`
-//     document.querySelector("#cat-form").addEventListener(`submit`, (e) => catSubmit(e, randoCat))
-// }
+};    
+let newDog
 function randomizeDog(){
-    const newDog = dogArray[dogArray.length - dogDiv.dataset.dogId];
-    [dogImg.src, dogImg.id] = [newDog.image, newDog.id];
+    let newDog = dogArray[dogArray.length - (Math.floor(Math.random() * dogImg.id))];
+    dogImg.src = newDog.image
+    dogImg.id = newDog.id
     dogButton.innerHTML = `${newDog.breed}`;
-}
+};

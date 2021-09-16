@@ -13,6 +13,7 @@
     border-radius: 20%;
     justify-content: center;
     display: flex;
+    animation: 1s;
   }
   img#header-img {
     box-sizing: border-box;
